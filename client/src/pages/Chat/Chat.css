@@ -1,0 +1,127 @@
+.Chat {
+  position: relative;
+  display: grid;
+  grid-template-columns: 22% auto;
+  gap: 1rem;
+}
+
+.Left-side-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.Chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--cardColor);
+  border-radius: 1rem;
+  padding: 1rem;
+  height: auto;
+  min-height: 80vh;
+  overflow: scroll;
+}
+
+.Chat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.Right-side-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.conversation:hover {
+  background: #80808038;
+  cursor: pointer;
+}
+
+.conversation {
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
+.conversation > div {
+  position: relative;
+}
+
+.online-dot {
+  background-color: greenyellow;
+  border-radius: 50%;
+  position: absolute;
+  left: 2rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+
+.chatbox-empty-message {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+ .Chat {
+    grid-template-columns: 16% auto;
+  }
+   .follower.conversation>div>.name{
+    display: none;
+   }
+}
+
+.User-Chat-Container {
+  width: 100%;
+}
+
+.User-Chat-Container .user-chat-top {
+  padding: 1rem;
+  background: linear-gradient(106.23deg, #f99827 0%, #f95f35 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 2rem);
+  text-transform: capitalize;
+}
+
+.User-Chat-Container .user-chat-back {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.User-Chat-Container .chat-box {
+  position: fixed;
+  gap: 20px;
+  bottom: 1rem;
+  width: calc(100% - 40px - 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.User-Chat-Container .chat-box input {
+  outline: none;
+  border: none;
+  width: 70%;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  box-shadow: 0px 0px 10px rgb(213, 213, 213);
+}
+
+.User-Chat-Container .chat-box button {
+  background: royalblue;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
