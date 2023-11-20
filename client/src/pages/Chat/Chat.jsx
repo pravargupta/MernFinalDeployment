@@ -46,7 +46,7 @@ const Chat = () => {
 
   // Connect to Socket.io
   useEffect(() => {
-    socket.current = io("ws://localhost:8800");
+    socket.current = io("https://mern-backend-final-nw6v.onrender.com");
     socket.current.emit("new-user-add", user._id);
     socket.current.on("get-users", (users) => {
       setOnlineUsers(users);
